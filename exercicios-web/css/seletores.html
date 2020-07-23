@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+          /* tag universal  */
+          /* *{
+           color: #ff0;
+           background-color: #f77;
+
+       } */ 
+       /* classe */
+       /* .tag {
+           color: #ff0;
+           background-color: #f77;
+
+       } */
+       /* seletor de id */
+       /* #aprovados {
+           color: #ff0;
+           background-color: #f77;
+
+       }  */
+
+       /* dentro do id aninhado quero pegar a div */
+/* 
+       #aninhado > div {
+           color: #ff0;
+           background-color: #f77;
+
+       }  */
+
+       /* Pegando qualquer descendente de alinhado */
+
+       /* #aninhado section {
+           color: #ff0;
+           background-color: #f77;
+
+       }  */
+
+       /* seletor de irmãos adjacentes */
+
+       /* p + ul {
+           color: #ff0;
+           background-color: #f77;
+
+       }  */
+
+       /* irmão de forma geral */
+
+       /* p ~ ol {
+           color: #ff0;
+           background-color: #f77;
+
+       }  */
+
+       /* seletor de atribuito  */
+       /* [feira=casa] */
+/* 
+       [feira] { 
+           color: #ff0;
+           background-color: #f77;
+
+       }  */
+
+       /* Seletores que envolvem filhos */
+       /* span:nth-child(1) {
+           color: #ff0;
+           background-color: #f77;
+
+       }  */
+
+       /* filhos impares  */
+
+       /* section > :nth-child(odd) {
+           color: #ff0;
+           background-color: #f77;
+
+       }  */
+
+       /* varias secoes com o mesmo css */
+       /* section > :nth-child(odd), ul, p {
+           color: #ff0;
+           background-color: #f77;
+
+       }  */
+
+       section > span:nth-of-type(2) {
+           color: #ff0;
+           background-color: #f77;
+
+       } 
+       
+
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag nolabel'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

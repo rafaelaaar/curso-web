@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritório' data-urgencia="5">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+        const lista = document.querySelector('div ul[destino="escritório"]')
+        console.log('Elemento "ul" .......')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.id)
+        console.log('getAttribute', lista.getAttribute('destino'))
+        console.log('hasAttribute', lista.hasAttribute('destino'))
+
+        //alterando atributos
+        lista.setAttribute('destino', 'empresa')
+        lista.setAttribute('status', 'aberto')
+        lista.removeAttribute('destino')
+
+        console.log(lista.dataset)
+        // acessando a urgencia
+        console.log(lista.dataset.urgencia)
+        //mudando o valor da urgencia 
+        lista.dataset.urgencia = 4
+
+        //acessar urgencia por meio do metodo getAttribute
+        console.log(lista.getAttribute('data-urgencia'))
+
+        //cuidados
+        const label = document.querySelector('label')
+        console.log(label.for)
+        //nao posso usar o identificado como sendo for, por ser uma palavra reservada
+        console.log(label.htmlFor)
+        //usando string
+        console.log(label.getAttribute('for'))
+        //com htmlFor, null.
+
+
+
+    </script>
+</body>
+
+</html>
