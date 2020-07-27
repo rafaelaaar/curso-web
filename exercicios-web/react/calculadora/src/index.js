@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Calculator from './main/Calculator';
-import serviceWorker from './serviceWorker';
-
+import { register } from './serviceWorker';
+ 
 ReactDOM.render(
-  <Calculator />,
-  document.getElementById('root')
+  <div>
+    <h1> Calculadora </h1>
+    <Calculator />
+  </div>
+  , document.getElementById('root')
 );
-serviceWorker.register();
+register();
